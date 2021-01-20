@@ -1,0 +1,48 @@
+{% load static %}
+<!doctype html>
+<html lang="es">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <title>{% block title %}{% endblock title %}</title>
+  <style>
+    .asteriskField {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="modal fade" tabindex="-1" role="dialog" id="modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content"></div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="card border border-0">
+      <div class="card-body">
+        {% block content %}
+        <h1>Hello World!</h1>
+        {% endblock content %}
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="{% static 'jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <script src="{% static 'js/jquery.bootstrap.modal.forms.min.js' %}"></script>
+  {% block js %}
+  {% endblock js %}
+</body>
+
+</html>
